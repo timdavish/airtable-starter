@@ -15,12 +15,14 @@ $ npm install
 
 ### Configuring Airtable
 
-Edit the `.env` file, adding your Airtable API key and other information. This file looks like this:
+Edit the `.env` file, adding your Airtable API key, base, and table which can be found [here](https://airtable.com/api). This file looks like this:
 
 ```bash
-AIRTABLE_API_KEY=
-AIRTABLE_BASE=
-AIRTABLE_TABLE=
+export AIRTABLE_API_KEY=
+export AIRTABLE_API_VERSION=0.1.0
+export AIRTABLE_API_URL=https://api.airtable.com/v0
+export AIRTABLE_BASE=
+export AIRTABLE_TABLE=
 ```
 
 ### Run the App
