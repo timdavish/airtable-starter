@@ -4,7 +4,9 @@
   "description": "A boilerplate for Airtable, Node & React applications",
   "main": "index.js",
   "scripts": {
-    "start": "node server/",
+    "client:watch": "webpack --watch --hide-modules",
+    "server:watch": "nodemon --watch server/ --ignore server/public/ --exec 'node server/'",
+    "start": "npm-run-all --parallel client:watch server:watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,9 +25,18 @@
     "body-parser": "^1.18.2",
     "errorhandler": "^1.5.0",
     "express": "^4.16.2",
+    "html-webpack-plugin": "^2.30.1",
     "node-fetch": "^1.7.3",
-    "path": "^0.12.7",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.14.12",
+    "npm-run-all": "^4.1.2"
   }
 }
