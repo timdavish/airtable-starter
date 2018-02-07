@@ -10,8 +10,11 @@ A boilerplate for [Airtable](https://airtable.com/), Node & React applications.
 $ cd ~/Projects/
 $ git clone --depth=1 git@github.com:timdavish/airtable-starter.git myproject
 $ cd myproject/
+$ direnv allow
 $ npm install
 ```
+
+You can then delete the `.git` directory and run `git init` to initialize the project as it's own git repository.
 
 ### Configuring Airtable
 
